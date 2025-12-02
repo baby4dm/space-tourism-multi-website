@@ -1,1 +1,49 @@
 @import "tailwindcss";
+
+@theme {
+  --color-dark-blue: #0b0d17;
+  --color-light-blue: #d0d6f9;
+  --color-white: #ffffff;
+
+  --color-white-25: rgba(255, 255, 255, 0.25);
+  --color-white-10: rgba(255, 255, 255, 0.1);
+
+  --font-bellefair: "Bellefair", serif;
+  --font-barlow: "Barlow", sans-serif;
+  --font-condensed: "Barlow Condensed", sans-serif;
+
+  --text-preset-1: 150px;
+  --text-preset-2: 100px;
+  --text-preset-3: 56px;
+  --text-preset-4: 32px;
+  --text-preset-5: 28px;
+  --text-preset-6: 28px;
+  --text-preset-7: 14px;
+  --text-preset-8: 16px;
+  --text-preset-9: 18px;
+  --text-preset-1-mobile: 80px;
+  --text-preset-6-mobile: 16px;
+  --text-preset-9-mobile: 15px;
+
+  --tracking-preset-15: 0.15em;
+
+  --leading-preset-1: 1.1;
+  --leading-preset-2: 1.15;
+  --leading-normal: 1.2;
+  --leading-relaxed: 1.8;
+}
+
+@layer base {
+  body {
+    @apply bg-[url('/images/home/background-home-mobile.jpg')] w-full min-h-screen bg-center bg-cover bg-no-repeat text-white font-barlow;
+  }
+  h1 {
+    @apply text-preset-1-mobile font-bellefair font-normal;
+  }
+  h2 {
+    @apply text-preset-6-mobile font-condensed font-normal text-light-blue tracking-preset-15;
+  }
+  p {
+    @apply text-preset-9-mobile leading-relaxed text-light-blue;
+  }
+}

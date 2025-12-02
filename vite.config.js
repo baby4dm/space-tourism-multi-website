@@ -1,9 +1,10 @@
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 import { resolve } from "path";
+import htmlInject from "vite-plugin-html-inject";
 
 export default defineConfig({
-  plugins: [tailwindcss()],
+  plugins: [tailwindcss(), htmlInject()],
 
   build: {
     rollupOptions: {
