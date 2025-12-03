@@ -56,6 +56,9 @@
   }
 
   @media (min-width: 768px) {
+    body {
+      @apply bg-[url('/images/home/background-home-tablet.jpg')];
+    }
     h1 {
       @apply text-preset-1;
     }
@@ -64,6 +67,12 @@
     }
     p {
       @apply text-preset-6-mobile tracking-preset-2;
+    }
+  }
+
+  @media (min-width:1440px) {
+    body {
+      @apply bg-[url('/images/home/background-home-desktop.jpg')];
     }
   }
 }

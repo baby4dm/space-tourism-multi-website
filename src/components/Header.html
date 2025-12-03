@@ -1,4 +1,4 @@
-<header class="h-22 md:h-24">
+<header class="h-22 md:h-24 lg:pt-10 lg:h-34">
   <div class="h-full p-6 md:p-0">
     <nav class="mobile-nav md:hidden flex justify-between items-center">
       <img
@@ -11,7 +11,7 @@
       </button>
     </nav>
     <nav class="desktop-nav hidden md:flex justify-between items-center h-full">
-      <div class="pl-10 flex-138">
+      <div class="pl-10 flex-138 lg:pl-14">
         <img
           class="h-full max-h-12"
           src="/images/shared/logo.svg"
@@ -19,8 +19,15 @@
         />
       </div>
 
-      <ul class="bg-white-5 flex gap-8 h-full p-10 flex-640 justify-end">
-        <li><a href="index.html">HOME</a></li>
+      <ul
+        class="bg-white/10 lg:backdrop-blur-md flex gap-8 h-full p-10 flex-640 justify-end max-w-[736px] items-center lg:gap-10 lg:pr-14"
+      >
+        <li>
+          <a href="index.html" class="nav-item">
+            <p class="text-white font-bold">00</p>
+            <p class="text-white">HOME</p>
+          </a>
+        </li>
 
         <li>
           <a href="destination.html" class="nav-item">
