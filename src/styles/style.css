@@ -7,6 +7,7 @@
 
   --color-white-25: rgba(255, 255, 255, 0.25);
   --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-5: rgba(255, 255, 255, 0.05);
 
   --font-bellefair: "Bellefair", serif;
   --font-barlow: "Barlow", sans-serif;
@@ -25,15 +26,19 @@
   --text-preset-6-mobile: 16px;
   --text-preset-9-mobile: 15px;
 
+  --tracking-preset-2: 0.02em;
   --tracking-preset-15: 0.15em;
+  --tracking-preset-18: 0.18em;
 
-  --leading-preset-1: 1.1;
   --leading-preset-2: 1.15;
   --leading-normal: 1.2;
   --leading-relaxed: 1.8;
 }
 
 @layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
   body {
     @apply bg-[url('/images/home/background-home-mobile.jpg')] w-full min-h-screen bg-center bg-cover bg-no-repeat text-white font-barlow;
   }
@@ -45,5 +50,25 @@
   }
   p {
     @apply text-preset-9-mobile leading-relaxed text-light-blue;
+  }
+  a {
+    @apply text-preset-6-mobile font-condensed tracking-[2px];
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      @apply text-preset-1;
+    }
+    h2 {
+      @apply text-preset-5 leading-1;
+    }
+    p {
+      @apply text-preset-6-mobile tracking-preset-2;
+    }
+  }
+}
+@layer components {
+  .nav-item {
+    @apply flex gap-4;
   }
 }

@@ -1,10 +1,48 @@
-<header class="h-22">
-  <div class="p-6 h-full">
+<header class="h-22 md:h-24">
+  <div class="h-full p-6 md:p-0">
     <nav class="mobile-nav md:hidden flex justify-between items-center">
-      <img class="h-full max-h-10" src="/images/shared/logo.svg" alt="Space Tourism Logo" />
+      <img
+        class="h-full max-h-10"
+        src="/images/shared/logo.svg"
+        alt="Space Tourism Logo"
+      />
       <button class="h-full max-h-[21px]">
-        <img src="/images/shared/icon-hamburger.svg" alt="Menu">
+        <img src="/images/shared/icon-hamburger.svg" alt="Menu" />
       </button>
+    </nav>
+    <nav class="desktop-nav hidden md:flex justify-between items-center h-full">
+      <div class="pl-10 flex-138">
+        <img
+          class="h-full max-h-12"
+          src="/images/shared/logo.svg"
+          alt="Space Tourism Logo"
+        />
+      </div>
+
+      <ul class="bg-white-5 flex gap-8 h-full p-10 flex-640 justify-end">
+        <li><a href="index.html">HOME</a></li>
+
+        <li>
+          <a href="destination.html" class="nav-item">
+            <p class="text-white font-bold">01</p>
+            <p class="text-white">DESTINATION</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="crew.html" class="nav-item">
+            <p class="text-white font-bold">02</p>
+            <p class="text-white">CREW</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="technology.html" class="nav-item">
+            <p class="text-white font-bold">03</p>
+            <p class="text-white">TECHNOLOGY</p>
+          </a>
+        </li>
+      </ul>
     </nav>
   </div>
 </header>
