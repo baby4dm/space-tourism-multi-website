@@ -36,11 +36,14 @@
 }
 
 @layer base {
-  * {
-    @apply m-0 p-0 box-border;
-  }
   body {
-    @apply bg-[url('/images/home/background-home-mobile.jpg')] w-full min-h-screen bg-center bg-cover bg-no-repeat text-white font-barlow;
+    @apply w-full min-h-screen bg-center bg-cover bg-no-repeat text-white font-barlow;
+  }
+  .bg-home {
+    @apply bg-[url('/images/home/background-home-mobile.jpg')];
+  }
+  .bg-destination {
+    @apply bg-[url('/images/destination/background-destination-mobile.jpg')];
   }
   h1 {
     @apply text-preset-1-mobile font-bellefair font-normal;
@@ -48,16 +51,25 @@
   h2 {
     @apply text-preset-6-mobile font-condensed font-normal text-light-blue tracking-preset-15;
   }
+  h3 {
+    @apply text-preset-7 font-condensed font-normal tracking-[2px] text-light-blue;
+  }
   p {
     @apply text-preset-9-mobile leading-relaxed text-light-blue;
   }
   a {
     @apply text-preset-6-mobile font-condensed tracking-[2px];
   }
+  hr {
+    @apply h-[1px] bg-white-25 border-0 w-full;
+  }
 
   @media (min-width: 768px) {
-    body {
+    .bg-home {
       @apply bg-[url('/images/home/background-home-tablet.jpg')];
+    }
+    .bg-destination {
+      @apply bg-[url('/images/destination/background-destination-tablet.jpg')];
     }
     h1 {
       @apply text-preset-1;
@@ -68,16 +80,56 @@
     p {
       @apply text-preset-6-mobile tracking-preset-2;
     }
+    li {
+      @apply cursor-pointer;
+    }
   }
 
-  @media (min-width:1440px) {
-    body {
+  @media (min-width: 1440px) {
+    .bg-destination {
+      @apply bg-[url('/images/destination/background-destination-desktop.jpg')];
+    }
+    .bg-home {
       @apply bg-[url('/images/home/background-home-desktop.jpg')];
     }
   }
 }
 @layer components {
   .nav-item {
-    @apply flex gap-4;
+    @apply flex gap-4 relative py-8 h-full;
+  }
+  .destination {
+    @apply text-preset-7 md:text-preset-8 font-condensed mb-2 transition duration-200 ease-in-out lg:text-preset-8 relative pb-3 text-light-blue;
+    border-bottom: 3px solid transparent;
+    letter-spacing: 2px;
+  }
+  .destination:hover {
+    @apply text-white;
+  }
+  .nav-item::after,
+  .destination::after {
+    content: "";
+    @apply absolute bottom-0 left-0 h-[3px] w-0;
+
+    background-color: transparent;
+
+    @apply transition-[width,background-color] duration-300 ease-in-out;
+  }
+
+  .nav-item:hover::after,
+  .destination:hover::after {
+    @apply w-full;
+    background-color: white;
+  }
+
+  .destination.active,
+  .nav-item.active {
+    @apply text-white hover:text-white;
+  }
+
+  .destination.active::after,
+  .nav-item.active::after {
+    @apply w-full bg-white;
+    background-color: white;
   }
 }

@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
-</body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Space tourism website</title>
+    <script type="module" src="/src/styles/style.css"></script>
+    <script src="/src/js/destination.js" defer></script>
+    <script src="/src/js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-destination">
+    <load src="/src/components/Header.html" />
+    <main class="flex justify-center">
+      <div class="p-6 flex flex-col gap-12 items-center md:p-10 lg:max-w-[1440px] lg:px-0">
+        <div class="flex gap-6 items-center md:self-start">
+          <p class="text-white-25 font-condensed text-[24px] font-bold tracking-widest-5 md:text-[32px]">01</p>
+          <h2 class="text-white">PICK YOUR DESTINATION</h2>
+        </div>
+        <div class="flex flex-col gap-14 items-center lg:flex-row lg:gap-8">
+          <div class="py-11 flex justify-center w-full  md:max-w-[300px] lg:max-w-[480px]">
+            <img id="destination-image" src="/images/destination/image-moon.webp" alt="Moon" />
+          </div>
+          <div>
+            <div class="flex flex-col items-center lg:items-start">
+              <ul class="flex max-w-[327px] justify-evenly w-full lg:justify-between">
+                <li id="moon" class="destination active">MOON</li>
+                <li id="mars" class=" destination">MARS</li>
+                <li id="europa" class="destination">EUROPA</li>
+                <li id="titan" class="destination">TITAN</li>
+              </ul>
+              <div class="py-6 gap-4 flex-col items-center text-center md:max-w-[514px] lg:text-start lg:py-10">
+                <h1 id="destination-title" class="md:text-[80px]">MOON</h1>
+                <p id="destination-description">
+                  See our planet as you’ve never seen it before. A perfect
+                  relaxing trip away to help regain perspective and come back
+                  refreshed. While you’re there, take in some history by
+                  visiting the Luna 2 and Apollo 11 landing sites.
+                </p>
+              </div>
+              <hr>
+              <div class="pt-6 gap-6 flex flex-col items-center lg:flex-row lg:pt-10">
+                <div class="flex flex-col items-center text-center gap-3 lg:items-start lg:min-w-[210px]">
+                  <h3>AVG. DISTANCE</h3>
+                  <p id="avg-dist" class="text-white text-preset-6 font-bellefair">384,400 km</p>
+                </div>
+                <div class="flex flex-col items-center text-center gap-3 lg:items-start">
+                  <h3>EST. TRAVEL TIME</h3>
+                  <p id="est-time" class="text-white text-preset-6 font-bellefair">3 days</p>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
