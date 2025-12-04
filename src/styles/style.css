@@ -4,7 +4,7 @@
   --color-dark-blue: #0b0d17;
   --color-light-blue: #d0d6f9;
   --color-white: #ffffff;
-
+  --color-menu-bg: rgba(11, 13, 23, 0.15);
   --color-white-25: rgba(255, 255, 255, 0.25);
   --color-white-10: rgba(255, 255, 255, 0.1);
   --color-white-5: rgba(255, 255, 255, 0.05);
@@ -131,5 +131,46 @@
   .nav-item.active::after {
     @apply w-full bg-white;
     background-color: white;
+  }
+  .mobile-menu {
+    @apply translate-x-full transition-transform duration-300 ease-in-out;
+  }
+
+  .mobile-menu-open {
+    @apply translate-x-0;
+  }
+
+  .mobile-nav-item {
+    @apply flex gap-4 items-center;
+  }
+  .mobile-nav-item.active {
+    @apply relative after:absolute after:top-0 after:right-[-2rem] after:h-full after:w-1 after:bg-white;
+  }
+
+  .nav-link {
+    @apply text-white tracking-[2px];
+  }
+
+  .explore-btn {
+    @apply relative z-10 transform transition duration-200 ease-out;
+  }
+
+  .explore-btn::before {
+    content: "";
+    @apply absolute left-1/2 top-1/2 w-full h-full rounded-full;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgba(255, 255, 255, 0.12);
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .explore-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  .explore-btn:hover {
+    @apply scale-95 text-dark-blue/50;
+    transition: transform 0.25s ease;
   }
 }

@@ -7,10 +7,57 @@
         alt="Space Tourism Logo"
       />
       <button class="h-full max-h-[21px]">
-        <img src="/images/shared/icon-hamburger.svg" alt="Menu" />
+        <img
+          class="hamburger-btn"
+          src="/images/shared/icon-hamburger.svg"
+          alt="Menu"
+        />
       </button>
+      <div
+        class="mobile-menu absolute bg-menu-bg backdrop-blur-md w-full max-w-[254px] h-screen z-10 right-0 top-0 p-8 flex flex-col gap-12"
+      >
+        <button class="w-6 h-auto self-end">
+          <img
+            class="close-btn"
+            src="/images/shared/icon-close.svg"
+            alt="Close menu"
+          />
+        </button>
+        <ul class="flex flex-col gap-8">
+          <li>
+            <a href="index.html" class="mobile-nav-item">
+              <p class="nav-link font-bold">00</p>
+              <p class="nav-link">HOME</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="destination.html" class="mobile-nav-item">
+              <p class="nav-link font-bold">01</p>
+              <p class="nav-link">DESTINATION</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="crew.html" class="mobile-nav-item">
+              <p class="nav-link font-bold">02</p>
+              <p class="nav-link">CREW</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="technology.html" class="mobile-nav-item">
+              <p class="nav-link font-bold">03</p>
+              <p class="nav-link">TECHNOLOGY</p>
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <nav class="desktop-nav hidden md:flex justify-between items-center h-full">
+    <nav
+      class="relative desktop-nav hidden md:flex justify-between items-center h-full"
+    >
+
       <div class="pl-10 flex-138 lg:pl-14">
         <img
           class="h-full max-h-12"
@@ -24,29 +71,29 @@
       >
         <li>
           <a id="home" href="index.html" class="nav-item">
-            <p class="text-white font-bold tracking-[2px]">00</p>
-            <p class="text-white tracking-[2px]">HOME</p>
+            <p class="nav-link font-bold">00</p>
+            <p class="nav-link">HOME</p>
           </a>
         </li>
 
         <li>
           <a id="destination" href="destination.html" class="nav-item">
-            <p class="text-white font-bold tracking-[2px]">01</p>
-            <p class="text-white tracking-[2px]">DESTINATION</p>
+            <p class="nav-link font-bold">01</p>
+            <p class="nav-link">DESTINATION</p>
           </a>
         </li>
 
         <li>
           <a id="crew" href="crew.html" class="nav-item">
-            <p class="text-white font-bold tracking-[2px]">02</p>
-            <p class="text-white tracking-[2px]">CREW</p>
+            <p class="nav-link font-bold">02</p>
+            <p class="nav-link">CREW</p>
           </a>
         </li>
 
         <li>
           <a id="technology" href="technology.html" class="nav-item">
-            <p class="text-white font-bold tracking-[2px]">03</p>
-            <p class="text-white tracking-[2px]">TECHNOLOGY</p>
+            <p class="nav-link font-bold">03</p>
+            <p class="nav-link">TECHNOLOGY</p>
           </a>
         </li>
       </ul>
