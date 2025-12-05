@@ -50,6 +50,9 @@
   .bg-crew {
     @apply bg-[url('/images/crew/background-crew-mobile.jpg')];
   }
+  .bg-technology {
+    @apply bg-[url('/images/technology/background-technology-mobile.jpg')];
+  }
   h1 {
     @apply text-preset-1-mobile font-bellefair font-normal;
   }
@@ -79,6 +82,9 @@
     .bg-crew {
       @apply bg-[url('/images/crew/background-crew-tablet.jpg')];
     }
+    .bg-technology {
+      @apply bg-[url('/images/technology/background-technology-tablet.jpg')];
+    }
     h1 {
       @apply text-preset-1;
     }
@@ -102,6 +108,9 @@
     }
     .bg-crew {
       @apply bg-[url('/images/crew/background-crew-desktop.jpg')];
+    }
+    .bg-technology {
+      @apply bg-[url('/images/technology/background-technology-desktop.jpg')];
     }
   }
 }
@@ -192,5 +201,11 @@
 
   .dot.active {
     @apply bg-white;
+  }
+  .tech-indicator-btn {
+    @apply w-12 h-12 lg:w-20 lg:h-20 border-[2px] border-white/25 rounded-full flex items-center justify-center text-[20px] font-bellefair text-center cursor-pointer lg:text-[32px];
+  }
+  .tech-indicator-btn.active {
+    @apply bg-white text-dark-blue border-white;
   }
 }
