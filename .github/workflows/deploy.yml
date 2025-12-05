@@ -1,4 +1,4 @@
-name: Deploy Vite multi-page app to GitHub Pages
+name: Deploy Vite app to GitHub Pages
 
 on:
   push:
@@ -39,6 +39,8 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
