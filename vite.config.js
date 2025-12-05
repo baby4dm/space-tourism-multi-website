@@ -4,6 +4,7 @@ import { resolve } from "path";
 import htmlInject from "vite-plugin-html-inject";
 
 export default defineConfig({
+  base: "/space-tourism-multi-website/",
   plugins: [tailwindcss(), htmlInject()],
 
   build: {
