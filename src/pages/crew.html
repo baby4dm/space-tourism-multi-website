@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
-</body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <script type="module" src="/src/styles/style.css"></script>
+    <script src="/src/js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <title>Space tourism website</title>
+  </head>
+  <body class="bg-crew">
+    <load src="/src/components/Header.html" />
+    <main class="flex justify-center ">
+      <div
+        class="p-6 flex flex-col gap-8 items-center pb-0 md:p-10 md:pb-0 lg:max-w-[1440px] h-full"
+      >
+        <div
+          class="flex gap-6 items-center md:self-start justify-center w-full lg:justify-start"
+        >
+          <p
+            class="text-white-25 font-condensed text-[24px] font-bold md:text-[32px]"
+          >
+            02
+          </p>
+          <h2 class="text-white">MEET YOUR CREW</h2>
+        </div>
+        <div
+          class="flex flex-col w-full items-center max-w-[512px] md:max-w-[540px]"
+        >
+          <div class="flex flex-col items-center text-center gap-6">
+            <div class="flex flex-col items-center gap-1 mt-10">
+              <h3 class="text-preset-9 font-bellefair font-normal text-white/50">
+                COMMANDER
+              </h3>
+              <h1 class="text-preset-3-mobile">DOUGLAS HURLEY</h1>
+            </div>
+            <p>
+              Douglas Gerald Hurley is an American engineer, former Marine Corps
+              pilot and former NASA astronaut. He launched into space for the
+              third time as commander of Crew Dragon Demo-2.
+            </p>
+          </div>
+          <div class="dot-indicators flex justify-center gap-4 mt-20 mb-8">
+            <button class="dot active"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+          </div>
+        </div>
+        <div class="w-full max-w-[446px] h-auto">
+          <img class="block w-full"
+            src="/images/crew/image-douglas-hurley.webp"
+            alt="Douglas Hurley"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
