@@ -1,8 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0; url=/src/pages/index.html" />
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="src/styles/style.css"></script>
+    <script src="src/js/main.js" defer></script>
+    <title>Space tourism website</title>
   </head>
-  <body></body>
+  <body class="bg-home">
+    <load src="src/components/Header.html" />
+    <main>
+      <div
+        class="p-6 flex flex-col items-center gap-6 min-h-[calc(100vh-88px)] md:px-10 md:py-32 md:gap-10 w-full lg:max-w-[1110px] lg:flex-row lg:mx-auto lg:justify-between lg:my-auto lg:items-center lg:px-10"
+      >
+        <div
+          class="flex flex-col gap-6 items-center text-center w-full max-w-[512px] md:max-w-[540px]"
+        >
+          <h2>SO, YOU WANT TO TRAVEL TO</h2>
+          <h1>SPACE</h1>
+          <p>
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+        </div>
+        <a
+          class="explore-btn w-[144px] h-[144px] rounded-full bg-white text-dark-blue font-bellefair text-preset-9 my-auto md:mt-auto md:mb-0 md:w-[272px] md:h-[272px] md:text-preset-4 lg:mb-[35px] lg:my-0 cursor-pointer flex items-center justify-center"
+          href="destination.html"
+        >
+          EXPLORE
+        </a>
+      </div>
+    </main>
+  </body>
 </html>

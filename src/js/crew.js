@@ -1,4 +1,4 @@
-const DATA_URL = "/src/data/data.json";
+const DATA_URL = "./src/data/data.json";
 
 const dots = document.querySelectorAll(".dot");
 const roleElement = document.getElementById("position");
@@ -23,7 +23,7 @@ function updateCrew(index) {
     nameElement.textContent = member.name.toUpperCase();
     bioElement.textContent = member.bio;
 
-    imageElement.src = member.images.webp.replace("./assets", "/images");
+    imageElement.src = member.images.webp.replace("./assets", "./images");
     imageElement.alt = member.name;
 
     textElements.forEach((el) => {
@@ -64,7 +64,7 @@ async function init() {
     });
 
     const firstMember = crewData[0];
-    imageElement.src = firstMember.images.webp.replace("./assets", "/images");
+    imageElement.src = firstMember.images.webp.replace("./assets", "./images");
     imageElement.onload = () => imageElement.classList.remove("opacity-0");
   } catch (error) {
     console.error(error);

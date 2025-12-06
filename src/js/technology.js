@@ -1,4 +1,4 @@
-const DATA_URL = "/src/data/data.json";
+const DATA_URL = "./src/data/data.json";
 
 const buttons = document.querySelectorAll(".tech-indicator-btn");
 const titleElement = document.getElementById("title");
@@ -13,7 +13,7 @@ let currentIndex = 0;
 function getImageUrl(item) {
   const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
   const path = isDesktop ? item.images.portrait : item.images.landscape;
-  return path.replace("./assets", "/images");
+  return path.replace("./assets", "./images");
 }
 
 function updateTechnology(index) {

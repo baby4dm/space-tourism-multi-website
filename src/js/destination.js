@@ -1,4 +1,4 @@
-const DATA_URL = "/src/data/data.json";
+const DATA_URL = "./src/data/data.json";
 
 const tabs = document.querySelectorAll(".destination");
 const imageElement = document.getElementById("destination-image");
@@ -8,6 +8,30 @@ const distanceElement = document.getElementById("avg-dist");
 const timeElement = document.getElementById("est-time");
 
 let spaceData = null;
+
+const fadeElements = [
+  imageElement,
+  titleElement,
+  descriptionElement,
+  distanceElement,
+  timeElement,
+];
+
+function fadeOut() {
+  fadeElements.forEach((el) => {
+    if (el) {
+      el.style.opacity = "0";
+    }
+  });
+}
+
+function fadeIn() {
+  fadeElements.forEach((el) => {
+    if (el) {
+      el.style.opacity = "1";
+    }
+  });
+}
 
 function updateDestination(destinationName) {
   if (!spaceData) return;
@@ -21,15 +45,29 @@ function updateDestination(destinationName) {
     return;
   }
 
-  if (imageElement) {
-    imageElement.src = destination.images.webp.replace("./assets", "/images");
-    imageElement.alt = destination.name;
-  }
-  if (titleElement) titleElement.textContent = destination.name.toUpperCase();
-  if (descriptionElement)
-    descriptionElement.textContent = destination.description;
-  if (distanceElement) distanceElement.textContent = destination.distance;
-  if (timeElement) timeElement.textContent = destination.travel;
+  fadeOut();
+
+  setTimeout(() => {
+
+    if (imageElement) {
+      const newSrc = destination.images.webp.replace("./assets", "./images");
+
+      imageElement.onload = () => {
+        imageElement.style.opacity = "1";
+      };
+
+      imageElement.src = newSrc;
+      imageElement.alt = destination.name;
+    }
+
+    if (titleElement) titleElement.textContent = destination.name.toUpperCase();
+    if (descriptionElement)
+      descriptionElement.textContent = destination.description;
+    if (distanceElement) distanceElement.textContent = destination.distance;
+    if (timeElement) timeElement.textContent = destination.travel;
+
+    fadeIn();
+  }, 300);
 }
 
 function setActiveTab(clickedTabId) {
@@ -54,7 +92,6 @@ async function init() {
     tabs.forEach((tab) => {
       tab.addEventListener("click", () => {
         const destinationId = tab.id;
-
         const destinationName =
           destinationId.charAt(0).toUpperCase() + destinationId.slice(1);
 
