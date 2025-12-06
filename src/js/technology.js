@@ -1,4 +1,4 @@
-const DATA_URL = "./src/data/data.json";
+const DATA_URL = "/space-tourism-multi-website/data/data.json";
 
 const buttons = document.querySelectorAll(".tech-indicator-btn");
 const titleElement = document.getElementById("title");

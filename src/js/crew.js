@@ -1,4 +1,4 @@
-const DATA_URL = "./src/data/data.json";
+const DATA_URL = "/data/data.json";
 
 const dots = document.querySelectorAll(".dot");
 const roleElement = document.getElementById("position");

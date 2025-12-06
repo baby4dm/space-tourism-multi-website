@@ -1,4 +1,4 @@
-const DATA_URL = "./src/data/data.json";
+const DATA_URL = "/data/data.json";
 
 const tabs = document.querySelectorAll(".destination");
 const imageElement = document.getElementById("destination-image");
